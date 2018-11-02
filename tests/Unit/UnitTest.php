@@ -51,15 +51,25 @@ class UnitTest extends TestCase
         $car= new Car();
         $car->make = 'Toyota';
         $car->model = 'Cambry';
-        $car->year = '2000';
+        $car->year = '2008';
         $this->assertTrue($car->save());
     }
     //unit test 6
     public function testUpdateCarYear()
     {
         $car = car::find(1);
-        $car->year = '2009';
+        $car->year = '2000';
         $this->assertTrue($car->save());
+    }
+    //unit test 7
+    public function testDeleteCar()
+    {
+        $car= new car();
+        $car->make = 'Toyota';
+        $car->model = 'White';
+        $car->year = '2005';
+        $car->save();
+        $this->assertTrue($car->delete());
     }
 
 }
