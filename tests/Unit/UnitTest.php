@@ -16,9 +16,15 @@ class UnitTest extends TestCase
     {
         $user= new User();
         $user->name = 'Krutika rasik Ramani';
-        $user->email = 'krr39@njit.edu';
-        $user->password = 'pass1233';
+        $user->email = 'krr39dcnjn@njit.edu';
+        $user->password = 'pasjjs1233';
         $this->assertTrue($user->save());
     }
-   
+    public function testUpdateSteveNameTable()
+    {
+        $user = User::find(1);
+        $user->name = 'Steve Smith';
+        $this->assertTrue($user->save());
+    }
+
 }

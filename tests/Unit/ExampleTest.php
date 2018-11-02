@@ -9,7 +9,8 @@ class ExampleTest extends TestCase
 {
     /**
      * A basic test example.
-     *
+     *  public function testInsertUserTable()
+   
      * @return void
      */
     public function testBasicTest()
