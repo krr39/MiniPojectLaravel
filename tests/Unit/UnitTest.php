@@ -71,5 +71,12 @@ class UnitTest extends TestCase
         $car->save();
         $this->assertTrue($car->delete());
     }
+    //unit test 8
+    public function testCountCarRecordsTable()
+    {
+        $car = car::all();
+        $carRecordsCount = $car->count();
+        $this->assertEquals(51,$carRecordsCount);
+    }
 
 }
