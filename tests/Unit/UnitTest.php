@@ -37,5 +37,12 @@ class UnitTest extends TestCase
         $user->save();
         $this->assertTrue($user->delete());
     }
+    //unit test 4
+    public function testCountNumberOfrecordsInDatabase()
+    {
+        $user = User::all();
+        $recordCount = $user->count();
+        $this->assertEquals(51, $recordCount);
+    }
 
 }
