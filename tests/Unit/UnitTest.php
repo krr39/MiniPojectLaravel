@@ -85,5 +85,11 @@ class UnitTest extends TestCase
         $year = (int)$car->Year;
         $this->assertInternalType("int", $year);
     }
+    //unit test 10
+    public function testCarMakeComp()
+    {
+        $car = Car::inRandomOrder()->first();
+        $this->assertContains($car->make, ["ford", "honda", "toyota"]);
+    }
 
 }
