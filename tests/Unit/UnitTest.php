@@ -7,6 +7,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\User;
+use App\car;
 
 
 class UnitTest extends TestCase
@@ -43,6 +44,15 @@ class UnitTest extends TestCase
         $user = User::all();
         $recordCount = $user->count();
         $this->assertEquals(51, $recordCount);
+    }
+    //unitest 5
+    public function testInsertCarTable()
+    {
+        $car= new Car();
+        $car->make = 'Toyota';
+        $car->model = 'Cambry';
+        $car->year = '2000';
+        $this->assertTrue($car->save());
     }
 
 }
